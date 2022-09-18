@@ -1,6 +1,17 @@
-# Lab602
+# TODO List - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
+## Requirements
+
+- node 12+
+
+A simple todo-list application using Angular. This application includes:
+
+1. Allow users to create new todos in the UI.
+2. Allow users to mark todos as complete changing its color to green.
+3. Allow users to mark todos as "postpone" which will temporarily remove them from the list.
+4. Allow users to delete todos from the UI.
+5. Add a clean button that will remove the completed todos.
+6. Add a restore button that will bring back all the postponed todos.
 
 ## Development server
 
