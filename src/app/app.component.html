@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">ToDo List</h5>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Crear Tarea" [(ngModel)]="newTarea" (keydown)="onEnter($event)">
+      <button (click)="addTarea()" class="btn btn-secondary" type="button" id="button-addon2">Añadir</button>
+    </div>
+    <ul class="list-group">
+      <li [ngClass]="getStyle(i)" *ngFor="let tarea of tareaList; let i = index;">
+        <div class="tarea" *ngIf="tarea.status !== 'postpone'">
+          {{tarea.title}}
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-sm btn-outline-success" (click)="complete(i)">Listo</button>
+            <button type="button" class="btn btn-sm btn-outline-warning" (click)="postpone(i)">Pausa</button>
+            <button type="button" class="btn btn-sm btn-outline-danger" (click)="deleteTarea(i)">Borrar</button>
+          </div>
+        </div>
+
+      </li>
+    </ul>
+    <div class="botones">
+      <button type="button" class="btn btn-outline-info" (click)="clean()">Limpiar</button>
+      <button type="button" class="btn btn-outline-warning" (click)="restore()">Restaurar</button>
+    </div>
+  </div>
+</div>
